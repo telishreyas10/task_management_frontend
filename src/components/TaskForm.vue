@@ -136,7 +136,7 @@ export default {
 
       try {
         const res = await axios
-          .post(`http://localhost:8080/tasks`, data)
+          .post(`https://task-management-dcvg.onrender.com/tasks`, data)
           .catch((err) => {
             if (err.response.status !== 200) {
               window.alert(err.response.data.error);
@@ -168,7 +168,7 @@ export default {
 
       try {
         const res = await axios
-          .put(`http://localhost:8080/tasks/${this.task._id}`, data)
+          .put(`https://task-management-dcvg.onrender.com/tasks/${this.task._id}`, data)
           .catch((err) => {
             if (err.response.status !== 200) {
               window.alert(err.response.data.error);
@@ -182,7 +182,7 @@ export default {
     async deleteTask() {
       try {
         const res = await axios
-          .delete(`http://localhost:8080/tasks/${this.task._id}`)
+          .delete(`https://task-management-dcvg.onrender.com/tasks/${this.task._id}`)
           .catch((err) => {
             if (err.response.status !== 200) {
               window.alert(err.response.data.error);

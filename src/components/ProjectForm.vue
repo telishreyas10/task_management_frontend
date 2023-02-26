@@ -74,7 +74,7 @@ export default {
       // view this console.log in your browser
       console.log(JSON.stringify(data));
       try {
-        const res = await axios.put(`http://localhost:8080/projects/${this.project._id}`, data).catch(err => {
+        const res = await axios.put(`https://task-management-dcvg.onrender.com/${this.project._id}`, data).catch(err => {
         if(err.response.status !== 200) {
             window.alert(err.response.data.error)
         }

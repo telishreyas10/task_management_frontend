@@ -71,11 +71,11 @@ export default {
     },
     async editProject(project) {
       const projRes = await fetch(
-        `http://localhost:8080/projects/${project.id}`
+        `https://task-management-dcvg.onrender.com/${project.id}`
       );
       const proj_data = await projRes.json();
 
-      const userRes = await fetch(`http://localhost:8080/users?isActive=true`);
+      const userRes = await fetch(`https://task-management-dcvg.onrender.com/users?isActive=true`);
       const user_data = await userRes.json();
 
       const filtered_managers = user_data.filter((user) => {
@@ -109,7 +109,7 @@ export default {
     },
   },
   async beforeRouteEnter(to, from, next) {
-    const projRes = await fetch(`http://localhost:8080/projects`);
+    const projRes = await fetch(`https://task-management-dcvg.onrender.com/projects`);
     const projects = await projRes.json();
 
     next(function (vm) {
@@ -118,7 +118,7 @@ export default {
   },
   async beforeUpdate() {
     if (this.refreshData) {
-      const projRes = await fetch(`http://localhost:8080/projects`);
+      const projRes = await fetch(`https://task-management-dcvg.onrender.com/projects`);
       const projects = await projRes.json();
       this.project_data = projects;
     }

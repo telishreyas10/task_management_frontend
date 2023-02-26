@@ -216,19 +216,19 @@ export default {
     },
     async fetchDetailPageData(identifier) {
       const projRes = await fetch(
-        `http://localhost:8080/projects/${identifier}`
+        `https://task-management-dcvg.onrender.com/projects/${identifier}`
       );
       const project = await projRes.json();
 
       // get all users who are available to be associated to the project
-      const priorityRes = await fetch(`http://localhost:8080/tasks/priorities`);
+      const priorityRes = await fetch(`https://task-management-dcvg.onrender.com/tasks/priorities`);
       const priorities = await priorityRes.json();
 
       // get all users who are available to be associated to the project
-      const statusRes = await fetch(`http://localhost:8080/tasks/statuses`);
+      const statusRes = await fetch(`https://task-management-dcvg.onrender.com/tasks/statuses`);
       const statuses = await statusRes.json();
 
-      const userRes = await fetch(`http://localhost:8080/users?isActive=true`);
+      const userRes = await fetch(`https://task-management-dcvg.onrender.com/users?isActive=true`);
       const user_data = await userRes.json();
 
       const filtered_users = user_data.filter((user) => {
@@ -264,7 +264,7 @@ export default {
     },
     async openTaskModal(task) {
       if (typeof task !== "undefined") {
-        const taskRes = await fetch(`http://localhost:8080/tasks/${task._id}`);
+        const taskRes = await fetch(`https://task-management-dcvg.onrender.com/tasks/${task._id}`);
         const task_data = await taskRes.json();
 
         // create an empty task object with the associated project id and empty timeline object
