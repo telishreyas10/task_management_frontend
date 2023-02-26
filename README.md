@@ -1,7 +1,64 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Task Master
 
-## Recommended IDE Setup
+The task management application is a web-based application designed to help users manage their projects and associated tasks. It allows users to create (not yet implemented) and update projects, create and assign tasks to team members, and track their progress. The application is built using frontend frameworks : Vue.js, Vite, and Vuetify and MongoDB as backend which are powerful tools for building fast and responsive web applications.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+
+
+## Authors
+
+- [@telishreyas10](https://www.github.com/telishreyas10)
+
+
+## Features
+
+- Update Projects
+- Add Tasks
+- Update tasks
+- Assign tasks to users
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Screenshots
+
+![App Screenshot](https://github.com/telishreyas10/task_management_frontend/blob/master/public/Home.PNG?raw=true)
+
+
+![App Screenshot](https://github.com/telishreyas10/task_management_frontend/blob/master/public/Projects.PNG?raw=true)
+
+## Demo
+
+https://taskmaster-t329.onrender.com
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/telishreyas10/task_management_frontend.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
